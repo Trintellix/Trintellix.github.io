@@ -71,13 +71,28 @@
       link.addEventListener('click', e => {
         const id = link.getAttribute('href').slice(1);
         const target = document.getElementById(id);
-        if (target) {
-
-          setTimeout(() => target.focus(), 0);
-        }
+        if (target) setTimeout(() => target.focus(), 0);
       });
     });
+    const phrases = [
+      { ko: "안녕하세요", en: "Hello" },
+      { ko: "감사합니다", en: "Thank you" },
+      { ko: "괜찮아요", en: "It is okay" },
+      { ko: "저기요", en: "Excuse me" },
+      { ko: "다시 말해 주세요", en: "Please say it again" },
+    ];
+    const phraseBtn = document.getElementById("phraseBtn");
+    const randomPhrase = document.getElementById("randomPhrase");
+
+    if (phraseBtn && randomPhrase) {
+      phraseBtn.addEventListener("click", () => {
+        const pick = phrases[Math.floor(Math.random() * phrases.length)];
+        randomPhrase.textContent = `${pick.ko}  ${pick.en}`;
+      });
+    }
+    
   });
+      
 </script>
 </body>
 </html>
