@@ -87,8 +87,17 @@
     const randomPhrase = document.getElementById("randomPhrase");
 
     if (phraseBtn && randomPhrase) {
+      let lastIndex = -1;
       phraseBtn.addEventListener("click", () => {
-        const pick = phrases[Math.floor(Math.random() * phrases.length)];
+        if (phrases.length === 0) return;
+        let idx = Math.floor(Math.random() * phrases.length);
+        if (phrases.length > 1) {
+          while (idx === lastIndex) {
+            idx = Math.floor(Math.random() * phrases.length);
+          }
+        }
+        lastIndex = idx;
+        const pick = phrases[idx];
         randomPhrase.textContent = `${pick.ko}  ${pick.en}`;
       });
     }
