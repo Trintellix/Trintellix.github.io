@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korean Food</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="food">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Primary">
+      <ul>
+        <li><a href="./resume.html">Introduction</a></li>
+        <li><a href="korean_food.html" aria-current="page" class="active">Korean Food</a></li>
+        <li><a href="language.html">Language</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="overlay" tabindex="-1">
+    <section class="post-hero">
+      <figure class="hero-image">
+        <img src="more_korean_food.jpg" alt="Korean Food on Table">
+      </figure>
+      <h1 class="hero-title"> Korean Dishes I've Had the Chance to Try</h1>
+    </section>
+    <section class="notes-intro">
+      <h2>Photos and quick notes from meals I loved</h2>
+    </section>
+
+    <section class="meal1">
+      <div class="meal1-grid">
+        <div class="meal1-copy">
+          <h3>Chicken Dolsot Bibimbap with Kimchi</h3>
+          <p>Chicken dolsot bibimbap is personally my favorite Korean dish!
+            The stone pot it arrives in usually is sizzling,
+            bringing out the aromas of the ingredients, alongside the chicken being tender,
+             and the veggies retaining its freshness and crunch. I especially love how the
+             stone pot allows the rice at the bottom to crisp up, giving the extra texture and
+             flavor. The best part of a bibimbap is when you mix everything together, as that's
+             how it is typically eaten. The gochujang coating every bite and every component of
+             the dish meshing makes it feel comforting and completed. As this is my go to order,
+             I sometimes have kimchi on the side, which is perfect for cutting through the richness.
+          </p>
+        </div>
+        <figure class="meal1-media">
+          <img src="koreanfood.jpg" alt="Chicken dolsot bibimbap with kimchi in a hot stone pot">
+        </figure>
+      </div>
+    </section>
+
+    <section class="meal2">
+      <div class="meal2-grid">
+        <div class="meal2-copy">
+          <h3>Bulgogi - Grilled and marinated Korean beef with a mixture of Korean soy sauce,
+            sesame oil, garlic, red pepper, onion, mushroom, and zucchini </h3>
+          <p>If I decide to try something different, I like to alternate by ordering bulgogi.
+            It never fails to come out steaming, with the smell of the sweet and savory marinade
+            hitting right away. Just like the chicken from the bibimbap, the beef always remains
+            tender and juicy and the onions and veggies are cooked until they are slightly crisp,
+            balancing the softness of the meat. Every bite never fails to be perfect, especially
+            when combining it with rice or kimchi. Bulgogi can be quite filling, so including side
+            dishes with it, elevates the experience to a completely different level.
+          </p>
+        </div>
+        <figure class="meal2-media">
+          <img src="bulgogi.jpg" alt="Bulgogi dolsot bibimbap with Kimchi">
+        </figure>
+      </div>
+    </section>
+    <section class="meal-videos">
+      <h2>Food Videos</h2>
+
+      <video width="500" controls preload="metadata" aria-describedby="mixing-desc">
+        <source src="mixing.mp4" type="video/mp4">
+        <track kind="captions" src="mixing.en.vtt" srclang="en" label="English">
+        Your Browser does not support this Video.
+      </video>
+      <p id="mixing-desc" class="visually-hidden">Mixing bibimbap with gochujang veggies and rice.</p>
+
+      <video width="500" controls preload="metadata" aria-describedby="showing-desc">
+        <source src="showing_food.mp4" type="video/mp4">
+        <track kind="captions" src="showing_food.en.vtt" srclang="en" label="English">
+        Your Browser does not support this Video.
+      </video>
+      <p id="showing-desc" class="visually-hidden">showing Korean dish.</p>
+    </section>
+
+      
+
+
+  </main>
+  <script src="main.js" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a.skip-link').forEach(link => {
+      link.addEventListener('click', e => {
+        const id = link.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (target) {
+
+          setTimeout(() => target.focus(), 0);
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

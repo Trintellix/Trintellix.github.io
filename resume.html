@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Korea - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="video-wrap" aria-hidden="true">
+    <video
+    id ="bg-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    >
+      <source src="homepage_bg.mp4" type ="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+  </div>
+
+  <header class="site-header">
+    <nav class="navigation" aria-label="Primary">
+      <ul>
+        <li><a href="resume.html">Introduction</a></li>
+        <li><a href="korean_food.html">Korean Food</a></li>
+        <li><a href="language.html">Language</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="overlay" tabindex="-1">
+    <h1>South Korea</h1>
+    
+    <section class="intro" aria-label="Welcome">
+      <div class="roll-container">
+        <div class="roll-wrapper">
+          <p>Welcome to my website!</p>
+          <p>I have created this website</p>
+          <p>to share my Korean experience</p>
+          <p>I have been studying Korean for the past two years</p>
+          <p>So that was the main inspiration behind this project</p>
+          <p>It consists of three pages </p>
+          <p>One is this introduction</p>
+          <p>The second is my experience with Korean food including photos and videos that my girlfriend and I took!</p>
+          <p>The third page is a small list of Korean vocab and phrases that I think could be helpful.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+    
+  <footer class="site-footer">
+    <p>Background video by
+      <a href="https://pixabay.com/users/livesmart-44568/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=163123">livesmart</a> on <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=163123">Pixabay</a>
+    </p>
+  </footer>
+<script src="main.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a.skip-link').forEach(link => {
+      link.addEventListener('click', e => {
+        const id = link.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (target) {
+
+          setTimeout(() => target.focus(), 0);
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

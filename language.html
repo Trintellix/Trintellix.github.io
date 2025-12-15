@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="language">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Primary">
+      <ul>
+        <li><a href="resume.html">Introduction</a></li>
+        <li><a href="korean_food.html">Korean Food</a></li>
+        <li><a href="language.html" aria-current="page" class="active">Language</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="overlay" tabindex="-1">
+    <section class="post-hero">
+      <h1 class="hero-title">Korean Words and Phrases That Are Good to Know</h1>
+
+    </section>
+
+    <section class="grid" aria-labelledby="phrases-head">
+      <h2 id="phrases-head">Here are some expressions that are good to remember</h2>
+      <article class="card" aria-labelledby="important-head">
+        <h3 id="important-head">Important things to know!</h3>
+
+        <dl class="phrase-list">
+          <dt><span class="korean" lang="ko">안녕하세요?</span> <span class="roman">(annyeonghaseyo?)</span></dt>
+          <dd class="translation">Hello</dd>
+
+          <dt><span class="korean" lang="ko">저기요!</span> <span class="roman">(jeogiyo)</span></dt>
+          <dd class="translation">Excuse me (to get someone's attention)</dd>
+
+          <dt><span class="korean" lang="ko">다시 말해 주세요.</span> <span class="roman">(dasi malhae juseyo.)</span></dt>
+          <dd class="translation">Please repeat that.</dd>
+
+          <dt><span class="korean" lang="ko">이해해요.</span> <span class="roman">(ihaehaeyo)</span></dt>
+          <dd class="translation">I understand.</dd>
+
+          <dt><span class="korean" lang="ko">이해가 안 돼요.</span> <span class="roman">(ihaega an dwaeyo)</span></dt>
+          <dd class="translation">I do not understand.</dd>
+
+          <dt><span class="korean" lang="ko">감사합니다.</span> <span class="roman">(gamsahamnida)</span></dt>
+          <dd class="translation">Thank you.</dd>
+
+          <dt><span class="korean" lang="ko">괜찮아요.</span> <span class="roman">(gwaenchanayo)</span></dt>
+          <dd class="translation">It's okay.</dd>
+
+          <dt><span class="korean" lang="ko">화장실은 어디에 있어요?</span> <span class="roman">(hwajangsireun eodie isseoyo?)</span></dt>
+          <dd class="translation">Where is the bathroom?</dd>
+    
+            
+
+        </dl>
+      </article>
+    </section>
+  </main>
+<script src="main.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a.skip-link').forEach(link => {
+      link.addEventListener('click', e => {
+        const id = link.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (target) {
+
+          setTimeout(() => target.focus(), 0);
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
